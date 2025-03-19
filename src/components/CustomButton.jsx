@@ -48,9 +48,9 @@ const CustomButton = ({ variant, size, customClass, text, icon, ...props }) => {
 
       {/* Expanding circle effect from bottom-right */}
       <span
-        className={`absolute rounded-full bg-white w-[300%] h-[300%] ${
+        className={`absolute rounded-full bg-white w-[100%] h-[150%] ${
           hovered ? "scale-100" : "scale-0"
-        } transition-transform duration-700 ease-in-out origin-bottom-right`}
+        } transition-transform duration-700 ease-in-out origin-bottom`}
       />
     </Button>
   );
