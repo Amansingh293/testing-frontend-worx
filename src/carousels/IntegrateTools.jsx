@@ -591,6 +591,7 @@ import linkedin from "../assets/linkedin.png";
 import salesforce from "../assets/salesforce.png";
 import dive from "../assets/dive.png";
 import glowstar from "../assets/glowstar.gif";
+import outlook from "../assets/outlook.png";
 
 // Image array duplicated for seamless looping
 const images = [
@@ -598,18 +599,49 @@ const images = [
   dive,
   mail,
   salesforce,
-  dive,
-  zoho,
   linkedin,
-  mail,
+  outlook,
   zoho,
   dive,
   mail,
   salesforce,
-  dive,
-  zoho,
   linkedin,
+  outlook, zoho,
+  dive,
   mail,
+  salesforce,
+  linkedin,
+  outlook, zoho,
+  dive,
+  mail,
+  salesforce,
+  linkedin,
+  outlook, zoho,
+  dive,
+  mail,
+  salesforce,
+  linkedin,
+  outlook, zoho,
+  dive,
+  mail,
+  salesforce,
+  linkedin,
+  outlook, zoho,
+  dive,
+  mail,
+  salesforce,
+  linkedin,
+  outlook, zoho,
+  dive,
+  mail,
+  salesforce,
+  linkedin,
+  outlook, zoho,
+  dive,
+  mail,
+  salesforce,
+  linkedin,
+  outlook,
 ];
 
 const IntegrateTools = () => {
@@ -652,14 +684,14 @@ const IntegrateTools = () => {
             clipPath: "polygon(-236% -12%, 346% -9%, 109% 64%, -2% 87%)",
           }}
         >
-          <div className="scroll-container pr-8">
+          <div className="scroll-container reverse pr-8">
             {images.concat(images).map((src, i) => (
-              <div className="w-full flex justify-center items-center border-b-[1px] rotate-[-29deg] h-20 border-b-[#bfc1c4]">
+              <div className="w-full flex justify-center items-center border-b-[1px] rotate-[-30deg] h-[90px]  border-b-[#bfc1c4]">
                 <img
                   key={i}
                   src={src}
                   alt="Icon"
-                  className="scrolling-image "
+                  className="scrolling-image !pl-8"
                 />
               </div>
             ))}
@@ -678,14 +710,14 @@ const IntegrateTools = () => {
           className="absolute top-[173px] right-[171px] w-[180px] h-[463px] bg-white rotate-[28deg] flex flex-col items-center justify-center  overflow-hidden z-20"
           style={{ clipPath: "polygon(1% 27%, 102% 4%, 307% 150%, -70% 86%)" }}
         >
-          <div className="scroll-container reverse pr-7">
+          <div className="scroll-container  pr-7">
             {images.concat(images).map((src, i) => (
-              <div className="w-full flex justify-center items-center border-b-[1px] rotate-[-29deg]  h-20 border-b-[#D5D7DA]">
+              <div className="w-full flex justify-center items-center border-b-[1px] rotate-[-30deg]  h-[90px] border-b-[#bfc1c4]">
                 <img
                   key={i}
                   src={src}
                   alt="Icon"
-                  className="scrolling-image "
+                  className="scrolling-image marker !pl-8 "
                 />
               </div>
             ))}

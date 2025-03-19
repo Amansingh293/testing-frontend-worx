@@ -55,16 +55,16 @@ const CaseStudiesCarousel = ({ caseStudies }) => {
   const scrollerRef = useRef(null);
   return (
     <>
-      <div className="bg-white w-full flex flex-col mx-auto py-10 px-6 overflow-hidden">
+      <div className="bg-white w-full flex flex-col mx-auto py-10 pl-6  ">
         <h2 className="text-[#252B37] text-center text-[30px] font-inter font-medium leading-[38px] mb-[64px]">
           Success Stories Powered by Salesworx
         </h2>
 
-        <div ref={containerRef} className="relative z-20">
+        <div ref={containerRef} className="relative z-20 w-screen">
           <div className="flex items-center h-[450px]">
             <ul
               ref={scrollerRef}
-              className="flex min-w-full h-[450px] shrink-0 gap-[0px] animate-scroll hover:[animation-play-state:paused]"
+              className="flex w-screen h-[450px] shrink-0 gap-[0px] animate-scroll hover:[animation-play-state:paused]"
             >
               {caseStudies.map((item, index) => (
                 <li

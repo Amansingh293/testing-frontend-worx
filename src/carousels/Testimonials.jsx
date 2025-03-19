@@ -1,7 +1,11 @@
 import { Card } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
-import Rectangle from '../assets/Rectangle.png'
+import Rectangle from "../assets/Rectangle.png";
 const testimonials = [
   {
     name: "Anita Desai",
@@ -28,27 +32,32 @@ const testimonials = [
 
 export default function Testimonials() {
   const [api, setApi] = useState();
-  const [current, setCurrent] = useState(0)
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     if (!api) {
-      return
+      return;
     }
 
-    setCurrent(api.selectedScrollSnap())
+    setCurrent(api.selectedScrollSnap());
 
     api.on("select", () => {
-      setCurrent(api.selectedScrollSnap())
-    })
-  }, [api])
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   return (
     <div className="flex flex-col items-center text-center w-full p-6">
-      <h2 className="mb-[64px] text-[#252B37] text-center text-[30px] font-inter font-medium leading-[38px]">Hear from Our Satisfied Customers</h2>
-      <Carousel setApi={setApi} className="w-full">
-        <CarouselContent className="flex mx-1 h-full">
+      <h2 className="mb-[64px] text-[#252B37] text-center text-[30px] font-inter font-medium leading-[38px]">
+        Hear from Our Satisfied Customers
+      </h2>
+      <Carousel setApi={setApi} className="w-screen">
+        <CarouselContent className="flex ml-28 h-full">
           {testimonials.map((testimonial, idx) => (
-            <CarouselItem key={idx} className="sm:basis-3/5 basis-full flex justify-center overflow-hidden">
+            <CarouselItem
+              key={idx}
+              className="sm:basis-3/5 basis-full flex justify-center overflow-hidden"
+            >
               <Card
                 className="realtive w-[760px] h-[385px] p-6 text-white rounded-lg shadow-lg flex flex-col items-center relative bg-cover bg-[#207C97] overflow-hidden"
                 style={{
@@ -64,41 +73,91 @@ export default function Testimonials() {
                   className="absolute bottom-[140px] left-[90px] w-20 h-20 rounded-full mb-4 "
                 />
 
-
                 <div className="absolute top-[100px] right-8 z-10 w-[300px] flex flex-col text-left p-2">
-                  <p className="mb-4 stretch text-white text-[14px] font-normal leading-[24px] font-inter">{testimonial.testimonial}</p>
-                  <h3 className="text-white text-[18px] font-bold leading-[28px] font-inter">{testimonial.name}</h3>
+                  <p className="mb-4 stretch text-white text-[14px] font-normal leading-[24px] font-inter">
+                    {testimonial.testimonial}
+                  </p>
+                  <h3 className="text-white text-[18px] font-bold leading-[28px] font-inter">
+                    {testimonial.name}
+                  </h3>
                   <p className="text-xs">{testimonial.role}</p>
                 </div>
               </Card>
             </CarouselItem>
           ))}
         </CarouselContent>
-
-        <div className="flex justify-between gap-4 w-full mt-4">
-
-          <div className="flex justify-center items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" className={`transition-colors ${current === 0 ? 'text-gray-400' : 'text-[#252B37] hover:text-[#207C97]'}`}
-            >
-              <path d="M15.8335 9.99935H4.16683M4.16683 9.99935L10.0002 4.16602M4.16683 9.99935L10.0002 15.8327" stroke="#252B37" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <button onClick={() => api?.scrollTo(current - 1)}  disabled={current === 0}
-              className={`px-4 py-2 transition-colors ${current === 0 ? 'text-gray-400' : 'text-[#252B37] hover:text-[#207C97]'}`}
-          >Previous</button>
-          </div>
-
-
-          <div className="flex justify-center items-center">
-            <button onClick={() => api?.scrollTo(current + 1)}  disabled={current === testimonials.length-1}
-              className={`px-4 py-2 transition-colors ${current === testimonials.length-1 ? 'text-gray-400' : 'text-[#252B37] hover:text-[#207C97]'}`}
-            >Next</button>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M4.1665 9.99935H15.8332M15.8332 9.99935L9.99984 4.16602M15.8332 9.99935L9.99984 15.8327" stroke="#252B37" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-
-        </div>
       </Carousel>
+
+      <div className="flex justify-between gap-4 w-full mt-4">
+        <div className="flex justify-center items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            className={`transition-colors ${
+              current === 0
+                ? "text-gray-400"
+                : "text-[#252B37] hover:text-[#207C97]"
+            }`}
+          >
+            <path
+              d="M15.8335 9.99935H4.16683M4.16683 9.99935L10.0002 4.16602M4.16683 9.99935L10.0002 15.8327"
+              stroke="currentColor"
+              strokeWidth="1.67"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+
+          <button
+            onClick={() => api?.scrollTo(current - 1)}
+            disabled={current === 0}
+            className={`px-4 py-2 transition-colors ${
+              current === 0
+                ? "text-gray-400"
+                : "text-[#252B37] hover:text-[#207C97]"
+            }`}
+          >
+            Previous
+          </button>
+        </div>
+
+        <div className="flex justify-center items-center">
+          <button
+            onClick={() => api?.scrollTo(current + 1)}
+            disabled={current === testimonials.length - 1}
+            className={`px-4 py-2 transition-colors ${
+              current === testimonials.length - 1
+                ? "text-gray-400"
+                : "text-[#252B37] hover:text-[#207C97]"
+            }`}
+          >
+            Next
+          </button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            className={`transition-colors ${
+              current === testimonials.length - 1
+                ? "text-gray-400"
+                : "text-[#252B37] hover:text-[#207C97]"
+            }`}
+          >
+            <path
+              d="M4.1665 9.99935H15.8332M15.8332 9.99935L9.99984 4.16602M15.8332 9.99935L9.99984 15.8327"
+              stroke="currentColor"
+              strokeWidth="1.67"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
   );
 }

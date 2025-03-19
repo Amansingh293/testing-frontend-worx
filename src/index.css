@@ -258,11 +258,11 @@ button {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  animation: verticalScroll 25s linear infinite;
+  animation: verticalScroll 65s linear infinite;
 }
 
 .reverse {
-  animation: verticalScrollReverse 25s linear infinite;
+  animation: verticalScrollReverse 65s linear infinite;
 }
 
 .scrolling-image {
