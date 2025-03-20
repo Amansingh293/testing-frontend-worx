@@ -1,19 +1,21 @@
 import React from "react";
 import InfoSection from "./InfoSection";
 import CustomTable from "@/components/CustomTable";
+import table from "@/assets/table.png";
 import ProfileImage from "../../../assets/pp.png";
 
 const FourthComponent = () => {
   return (
     <div className="flex pt-10 mt-20 font-inter w-full justify-center gap-20 items-center">
-      <div className="border-[1px] shadow-[0_4px_12px_0_#E9EAEB] rounded-[8px] p-3 w-[730.08px] ">
+      {/* <div className="border-[1px] shadow-[0_4px_12px_0_#E9EAEB] rounded-[8px] p-3 w-[730.08px] ">
         <CustomTable
           headers={headers}
           data={data}
           className="font-poppins"
           rowBodyClass={" h-[40px] leading-[16.04px]"}
         />
-      </div>
+      </div> */}
+        <img src={table} alt="table" />
 
       {/* right portion */}
       <InfoSection
