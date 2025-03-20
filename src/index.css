@@ -19,9 +19,9 @@ html {
   text-rendering: optimizeLegibility;
 }
 /* Hide scrollbar for Chrome, Safari, and Opera */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 img {
   object-fit: contain;

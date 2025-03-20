@@ -606,37 +606,44 @@ const images = [
   mail,
   salesforce,
   linkedin,
-  outlook, zoho,
+  outlook,
+  zoho,
   dive,
   mail,
   salesforce,
   linkedin,
-  outlook, zoho,
+  outlook,
+  zoho,
   dive,
   mail,
   salesforce,
   linkedin,
-  outlook, zoho,
+  outlook,
+  zoho,
   dive,
   mail,
   salesforce,
   linkedin,
-  outlook, zoho,
+  outlook,
+  zoho,
   dive,
   mail,
   salesforce,
   linkedin,
-  outlook, zoho,
+  outlook,
+  zoho,
   dive,
   mail,
   salesforce,
   linkedin,
-  outlook, zoho,
+  outlook,
+  zoho,
   dive,
   mail,
   salesforce,
   linkedin,
-  outlook, zoho,
+  outlook,
+  zoho,
   dive,
   mail,
   salesforce,
@@ -646,7 +653,7 @@ const images = [
 
 const IntegrateTools = () => {
   return (
-    <div className="mx-auto relative h-[558px] rounded-[32px] bg-[#f3f8f8] shadow-sm flex flex-col md:flex-row items-center justify-between p-6 overflow-hidden">
+    <div className="mx-auto relative h-[558px] rounded-[32px] bg-white shadow-sm flex flex-col md:flex-row items-center justify-between p-9 overflow-hidden">
       {/* Left Section */}
       <div className="w-full md:w-1/2 text-center md:text-left">
         <div className="flex">
@@ -679,7 +686,7 @@ const IntegrateTools = () => {
       <div className="grid grid-rows-2 gap-4 items-center overflow-hidden">
         {/* First Column of Scrolling Icons */}
         <div
-          className="absolute bottom-[154px] right-[246px] w-[180px] h-[493px] bg-white rotate-[28deg] flex flex-col items-center justify-center shadow-xl overflow-hidden z-20"
+          className="absolute bottom-[154px] right-[246px] w-[180px] h-[493px] bg-white rotate-[28deg] flex flex-col items-center justify-center shadow-md overflow-hidden z-20"
           style={{
             clipPath: "polygon(-236% -12%, 346% -9%, 109% 64%, -2% 87%)",
           }}
@@ -707,7 +714,7 @@ const IntegrateTools = () => {
 
         {/* Second Column of Scrolling Icons */}
         <div
-          className="absolute top-[173px] right-[171px] w-[180px] h-[463px] bg-white rotate-[28deg] flex flex-col items-center justify-center  overflow-hidden z-20"
+          className="absolute top-[173px] right-[171px] w-[180px] h-[463px] bg-white rotate-[28deg] flex flex-col items-center shadow-md justify-center  overflow-hidden z-20"
           style={{ clipPath: "polygon(1% 27%, 102% 4%, 307% 150%, -70% 86%)" }}
         >
           <div className="scroll-container  pr-7">

@@ -1,54 +1,52 @@
+import CustomButton from "@/components/CustomButton";
 import { useRef } from "react";
 
 const caseStudies = [
   {
     title: "Leading Global Beverage Brand",
     percentage: "30%",
-    description: "reduction in resource conflicts."
+    description: "reduction in resource conflicts.",
   },
   {
     title: "Top Steel Manufacturing Giant",
     percentage: "20%",
-    description: "boost in team productivity."
+    description: "boost in team productivity.",
   },
   {
     title: "Leading Global Beverage Brand",
     percentage: "40%",
-    description: "reduction in project turnaround time."
+    description: "reduction in project turnaround time.",
   },
   {
     title: "Top Steel Manufacturing Giant",
     percentage: "50%",
-    description: "increase in task completion rates."
+    description: "increase in task completion rates.",
   },
   {
     title: "Top Steel Manufacturing Giant",
     percentage: "20%",
-    description: "boost in team productivity."
+    description: "boost in team productivity.",
   },
   {
     title: "Leading Global Beverage Brand",
     percentage: "40%",
-    description: "reduction in project turnaround time."
+    description: "reduction in project turnaround time.",
   },
   {
     title: "Top Steel Manufacturing Giant",
     percentage: "50%",
-    description: "increase in task completion rates."
-  }
+    description: "increase in task completion rates.",
+  },
 ];
 
 export default function SuccessStory() {
   const scrollerRef = useRef(null);
   return (
-      <div className="w-full">
-        <CaseStudiesCarousel caseStudies={caseStudies} />
-      </div>
+    <div className="w-full">
+      <CaseStudiesCarousel caseStudies={caseStudies} />
+    </div>
   );
 }
-
-
-
 
 const CaseStudiesCarousel = ({ caseStudies }) => {
   const containerRef = useRef(null);
@@ -60,17 +58,17 @@ const CaseStudiesCarousel = ({ caseStudies }) => {
           Success Stories Powered by Salesworx
         </h2>
 
-        <div ref={containerRef} className="relative z-20 w-screen">
-          <div className="flex items-center h-[450px]">
+        <div ref={containerRef} className="relative z-20  w-full">
+          <div className="flex items-center h-[450px]  w-full overflow-hidden">
             <ul
               ref={scrollerRef}
-              className="flex w-screen h-[450px] shrink-0 gap-[0px] animate-scroll hover:[animation-play-state:paused]"
+              className="flex w-full h-[450px] shrink-0 gap-[0px] animate-scroll hover:[animation-play-state:paused] "
             >
               {caseStudies.map((item, index) => (
                 <li
                   key={index}
-                  className="relative group w-[340px] max-w-full  rounded-2xl flex-shrink-0 md:w-[336px] text-center"
-                // flex flex-col items-start gap-6 p-10 self-stretch rounded-t-lg border border-[#E9EAEB] bg-white
+                  className="relative group w-[340px] max-w-full  rounded-2xl flex-shrink-0 md:w-[336px] text-center "
+                  // flex flex-col items-start gap-6 p-10 self-stretch rounded-t-lg border border-[#E9EAEB] bg-white
                 >
                   {/* Hover Glow Effect (Fixed) */}
                   <div className="absolute top-20 w-[400px] h-[200px] inset-0 rounded-full bg-[conic-gradient(from_90deg_at_0%_50%,#207C97_0deg,#E6F9FF_360deg)] blur-[97px] opacity-0 group-hover:opacity-100 transition duration-300 -z-10"></div>
@@ -83,15 +81,14 @@ const CaseStudiesCarousel = ({ caseStudies }) => {
                         {item.title}
                       </h3>
 
-                      <div className="mt-4 p-6 text-left flex flex-col justify-center cursor-pointer">
-                        <p className="text-[#252B37] hover:text-[#207C97] text-3xl font-inter font-bold leading-[44px] tracking-[-0.72px]">
+                      <div className="mt-4 p-6 text-left flex flex-col justify-center cursor-pointer hover:text-[#207C97]">
+                        <p className="text-inherit text-3xl font-inter font-bold leading-[44px] tracking-[-0.72px]">
                           {item.percentage}
                         </p>
-                        <p className="pr-2 text-[#535862] hover:text-[#207C97] text-base font-inter font-normal leading-6">
+                        <p className="pr-2 text-inherit text-base font-inter font-normal leading-6">
                           {item.description}
                         </p>
                       </div>
-
                     </div>
 
                     {/* Button */}
@@ -103,6 +100,14 @@ const CaseStudiesCarousel = ({ caseStudies }) => {
               ))}
             </ul>
           </div>
+        </div>
+
+        <div className="flex justify-center">
+          <CustomButton
+            variant="secondary"
+            text={"Start Your Success Journey"}
+            onClick={"onButtonClick"}
+          />{" "}
         </div>
       </div>
     </>

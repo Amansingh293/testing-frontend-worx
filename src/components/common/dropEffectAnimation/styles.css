@@ -17,7 +17,7 @@
 .second {
   width: 0;
   height: 0;
-  background-color: #207C97;
+  background-color: #207c97;
   animation: secondExpand 3s ease-in-out infinite;
 }
 
@@ -48,7 +48,7 @@
     opacity: 0;
   }
 
-  75% {
+  65% {
     width: 8rem;
     height: 8rem;
     opacity: 0.3;

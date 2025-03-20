@@ -1,6 +1,6 @@
 import React from "react";
 import InfoSection from "./InfoSection";
-import AiAssistance from "@/assets/aiassistance.svg";
+import AiAssistance from "@/assets/aiassistance.png";
 
 const SixthComponent = () => {
   return (
