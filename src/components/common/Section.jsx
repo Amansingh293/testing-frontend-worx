@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import campaign from "@/assets/campaign.png";
+import DropEffect from "./dropEffectAnimation/DropEffect";
+
 
 const Section = ({ text, text2, buttonText }) => {
   const navigate = useNavigate();
@@ -89,6 +91,7 @@ const Section = ({ text, text2, buttonText }) => {
             ></span>
           </button>
         </div>
+
 {/* 
         <img
           src={campaign}

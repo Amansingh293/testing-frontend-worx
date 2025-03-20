@@ -27,7 +27,6 @@ img {
   object-fit: contain;
   image-rendering: crisp-edges;
   image-rendering: -webkit-optimize-contrast;
-
 }
 
 /* Optional: Ensure the element is still scrollable */
@@ -266,7 +265,6 @@ button {
 }
 
 .scrolling-image {
-
   padding: 20px;
   margin-left: 5px;
   /* border-bottom: 1px solid #ccc; */

@@ -6,11 +6,14 @@ import upshortline from "@/assets/upshortline.svg";
 import straightline from "@/assets/straightline.svg";
 import downshortline from "@/assets/downshortline.svg";
 import downlongline from "@/assets/downlongline.svg";
+import smallline from "@/assets/smallstraightline.png";
 import PersonCard from "../common/PersonCard";
+import DropEffect from "../common/dropEffectAnimation/DropEffect";
+import CustomButton from "../CustomButton";
 
 const SalesIntelligence = () => {
   return (
-    <div className="flex flex-col gap-10 pl-3 pr-3 pt-12 pb-12 font-inter">
+    <div className="flex flex-col gap-10 pl-3 pr-3 pt-12 pb-12 font-inter rounded-3xl bg-white">
       <div className="flex flex-col w-full items-center gap-4">
         <h1 className="text-[#252B37] leading-[38px] text-[30px]">
           AI-Driven Sales Intelligence
@@ -19,8 +22,7 @@ const SalesIntelligence = () => {
           Salesworx Looks at much records for each account
         </p>
       </div>
-
-      <div className="w-full flex items-center gap-5 justify-between">
+      <div className="w-full flex items-center gap-5 justify-between ">
         <div className="flex flex-col gap-[31px]">
           <FeatureComponent
             image={
@@ -87,7 +89,7 @@ const SalesIntelligence = () => {
             <img
               src={upshortline}
               alt="upshortline"
-              className="absolute left-[194px] top-[28px]"
+              className="absolute left-[193px] top-[28px]"
             />
           </FeatureComponent>
           <FeatureComponent
@@ -121,7 +123,7 @@ const SalesIntelligence = () => {
             <img
               src={straightline}
               alt="straightline"
-              className="absolute left-[194px] top-[24px]"
+              className="absolute left-[194px] top-[23px]"
             />
           </FeatureComponent>
           <FeatureComponent
@@ -183,12 +185,52 @@ const SalesIntelligence = () => {
             <img
               src={downlongline}
               alt="downlongline"
-              className="absolute left-[194px] bottom-[30px]"
+              className="absolute left-[194px] bottom-[32px]"
             />
           </FeatureComponent>
         </div>
-        <PersonCard />
+        <DropEffect
+          icon={
+            <svg
+              width="135"
+              height="134"
+              viewBox="0 0 135 134"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="67.5625" cy="67" r="16.75" fill="#207C97" />
+              <circle cx="67.5625" cy="67" r="16.75" fill="#207C97" />
+              <circle cx="67.5625" cy="67" r="16.75" fill="#207C97" />
+              <path
+                d="M67.9868 76.3816H62.6636L67.5922 67.002H72.9154L67.9868 76.3816Z"
+                fill="white"
+              />
+              <path
+                d="M67.5205 67.0007H62.1973L67.1259 57.6211H72.4491L67.5205 67.0007Z"
+                fill="white"
+              />
+            </svg>
+          }
+          className={"ml-32"}
+        />
+        <div className="flex gap-0 items-center">
+          <img
+            src={smallline}
+            alt="smallline "
+            className="relative left-[14px]"
+          />
+          <PersonCard />
+        </div>
       </div>
+      <div className="flex justify-center">
+
+      <CustomButton
+        variant="secondary"
+        text={"Start for free*"}
+        onClick={"onButtonClick"}
+        showIcon={true}
+        />{" "}
+        </div>
     </div>
   );
 };

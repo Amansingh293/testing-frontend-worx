@@ -8,9 +8,9 @@ import HeroSectionSecondPortion from "./HeroSectionSecondPortion";
 const HeroSection = () => {
   return (
     <>
-      <div class="">
+      <div class="bg-white">
         {/* <!-- Hero Section --> */}
-        <div class="w-full">
+        <div class="w-full ">
           <div class="min-h-screenn relative z-10 flex items-center justify-center">
             <div className="flex flex-col items-center mt-[30px]">
               <div className="flex flex-col items-center text-center mb-[24px]">

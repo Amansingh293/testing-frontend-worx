@@ -686,7 +686,7 @@ const IntegrateTools = () => {
         >
           <div className="scroll-container reverse pr-8">
             {images.concat(images).map((src, i) => (
-              <div className="w-full flex justify-center items-center border-b-[1px] rotate-[-30deg] h-[90px]  border-b-[#bfc1c4]">
+              <div className="w-full flex justify-center items-center border-b-[1px] rotate-[-30deg] h-[90px]  border-b-[#ECECEC]">
                 <img
                   key={i}
                   src={src}
@@ -712,7 +712,7 @@ const IntegrateTools = () => {
         >
           <div className="scroll-container  pr-7">
             {images.concat(images).map((src, i) => (
-              <div className="w-full flex justify-center items-center border-b-[1px] rotate-[-30deg]  h-[90px] border-b-[#bfc1c4]">
+              <div className="w-full flex justify-center items-center border-b-[1px] rotate-[-30deg]  h-[90px] border-b-[#ECECEC]">
                 <img
                   key={i}
                   src={src}
