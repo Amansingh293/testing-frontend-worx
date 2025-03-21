@@ -53,37 +53,39 @@ export default function Testimonials() {
         Hear from Our Satisfied Customers
       </h2>
       <Carousel setApi={setApi} className="w-screen">
-        <CarouselContent className="flex ml-28 h-full">
+        <CarouselContent className="flex ml-40 h-full gap-x-2 w-[85%]">
           {testimonials.map((testimonial, idx) => (
             <CarouselItem
               key={idx}
-              className="sm:basis-3/5 basis-full flex justify-center overflow-hidden"
+              className=" basis-auto flex justify-center overflow-hidden"
             >
               <Card
-                className="font-inter realtive w-[720px] h-[415px] p-3 text-white rounded-lg shadow-lg flex justify-center gap-20  items-center relative bg-cover bg-[#207C97] overflow-hidden"
+                className="font-inter relative w-[720px] h-[415px] p-3 text-white rounded-lg shadow-lg flex justify-center gap-20 items-center bg-cover bg-[#207C97] overflow-hidden"
                 style={{
                   backgroundImage: `url(${Rectangle})`,
-       
                 }}
               >
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className=" bottom-[140px] left-[90px] w-32 h-32 rounded-full mb-4 ml-16 "
+                  className="bottom-[140px] left-[90px] w-32 h-32 rounded-full mb-4 ml-16"
                 />
 
-                <div className=" top-[100px] gap-9 right-8 z-10 w-[400px] flex flex-col text-left p-2">
-                  <h1 className="font-bold text-[20px] leading-[30px] italic">2x More Deals with Less Effort.</h1>
-                  <p className="mb-4 stretch text-white text-[16px] font-normal leading-[24px] font-inter">
+                <div className="top-[100px] gap-9 right-8 z-10 w-[400px] flex flex-col text-left p-2">
+                  <h1 className="font-bold text-[20px] leading-[30px] italic">
+                    2x More Deals with Less Effort.
+                  </h1>
+                  <p className="mb-4 stretch text-white text-[16px] font-normal leading-[24px]">
                     {testimonial.testimonial}
                   </p>
 
                   <div className="flex flex-col gap-2">
-
-                  <h3 className="text-white text-[18px] font-bold leading-[28px] font-inter">
-                    {testimonial.name}
-                  </h3>
-                  <p className="text-xs leading-[20px] font-normal ">{testimonial.role}</p>
+                    <h3 className="text-white text-[18px] font-bold leading-[28px]">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-xs leading-[20px] font-normal">
+                      {testimonial.role}
+                    </p>
                   </div>
                 </div>
               </Card>

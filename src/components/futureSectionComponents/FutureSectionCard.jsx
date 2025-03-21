@@ -12,13 +12,13 @@ const FutureSectionCard = ({ text }) => {
       >
         <path
           d="M9.5 1L1.5 9M1.5 1L9.5 9"
-          stroke="#6B7280"
+          stroke="#9CA3AF"
           stroke-width="1.33333"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
       </svg>
-      <span className="leading-[20px] font-normal text-[14px] text-gray-500">
+      <span className="leading-[20px] font-normal text-[14px] text-[#9CA3AF]">
         {text}
       </span>
     </div>

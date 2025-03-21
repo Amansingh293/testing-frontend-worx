@@ -9,16 +9,13 @@ import SixthComponent from "./SecondPortionComponents/SixthComponent";
 
 const HeroSectionSecondPortion = () => {
   return (
-    <div className="flex w-full mt-8 flex-col">
-      <Heading />
-      <div className="w-full border-[1px] rounded-[24px] border-[#207C9733] mt-16 p-12">
-        <FirstComponent />
-        <SecondComponent />
-        <ThirdComponent />
-        <FourthComponent />
-        <FifthComponent />
-        <SixthComponent/>
-      </div>
+    <div className="w-full border-[1px] rounded-[24px]  mt-16 p-12">
+      <FirstComponent />
+      <SecondComponent />
+      <ThirdComponent />
+      <FourthComponent />
+      <FifthComponent />
+      <SixthComponent />
     </div>
   );
 };

@@ -29,7 +29,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 const Layout = () => {
   return (
-    <div className="flex flex-col items-center bg-[#fcfcfc]"
+    <div className="flex flex-col items-center bg-[#fcfcfc] w-full"
     //  gap-[72px] w-[1443px]"
 >
       {/* Navbar */}
@@ -38,7 +38,7 @@ const Layout = () => {
       <ScrollToTop /> 
 
       {/* Main Content */}
-      <main className="max-w-[1200px]">
+      <main className="w-full ">
         <Outlet />
       </main>
     </div>

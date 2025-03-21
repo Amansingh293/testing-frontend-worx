@@ -6,7 +6,7 @@ import PersonlizedEmail from "./PersonlizedEmail";
 
 const FirstComponent = () => {
   return (
-    <div className="flex justify-between items-center w-full tracking-[0.010rem]">
+    <div className="flex justify-center items-center w-full tracking-[0.010rem] gap-20">
       {/* left portion */}
       <InfoSection
         title="Goodbye Spray & Pray!"
@@ -18,8 +18,7 @@ const FirstComponent = () => {
       />
 
       {/* Right portion */}
-      <PersonlizedEmail/>
-
+      <PersonlizedEmail />
 
       {/* <div className="font-poppins tracking-[0.030rem]  flex flex-col relative border-[1px] rounded-[10px] border-[#D7D7D799] leading-[16px] w-[458px]  shadow-[0_4px_12px_0_#E9EAEB] pt-9 pb-9 pl-12 pr-12 text-[12px] gap-2 mr-36">
         <div className="border-b-[1px] border-b-[#EFEFF1] pt-3 pb-3 text-[#605E5C] ">

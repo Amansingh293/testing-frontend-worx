@@ -7,7 +7,7 @@ import templateExamples from "@/assets/templateExamples.svg";
 
 const SecondComponent = () => {
   return (
-    <div className="flex pt-20 mt-5 font-inter  justify-between  items-center gap-4 ">
+    <div className="flex pt-20 mt-5 font-inter  justify-center gap-20 items-center ">
       {/* left portion */}
       <img
         src={templateExamples}

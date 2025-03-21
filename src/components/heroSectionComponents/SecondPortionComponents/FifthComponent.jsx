@@ -6,7 +6,7 @@ import Accounts from "@/components/common/Accounts";
 
 const FifthComponent = () => {
   return (
-    <div className="flex pt-10 mt-36 font-inter w-full justify-start gap-20 items-center relative h-[560px]">
+    <div className="flex pt-10 mt-36 font-inter w-full justify-center gap-20 items-center relative h-[560px]">
       {/* left portion */}
       <InfoSection
         className={""}

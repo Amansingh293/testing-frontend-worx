@@ -1,74 +1,119 @@
-import React from "react";
-// import Navbar from "./components/Navbar";
-import Features from "./pages/Features";
+import React, { Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import Pricing from "./pages/Pricing";
-import Insights from "./pages/Insights";
-import Contact from "./pages/Contact";
 import Layout from "./layout/Layout";
-import LoginPage from "./pages/LoginPage";
-import BlogSection from "./components/blogs/BlogSection";
-import BlogDetails from "./components/blogs/BlogDetails";
-import WhitepaperDetail from "./components/whitepappers/WhitepaperDetail";
-import WhitepapperSection from "./components/whitepappers/WhitepapperSection";
-// import ScrollToTop from "./components/ScrollToTop";
-// import WhitepapperSection from "./components/whitepappers/WhitePapperSection";
+import Loader from "./components/common/Loader";
 
-// const App = () => {
+// ✅ Lazy loading pages
+const HomePage = React.lazy(() => import("./pages/HomePage"));
+const Features = React.lazy(() => import("./pages/Features"));
+const Pricing = React.lazy(() => import("./pages/Pricing"));
+const Insights = React.lazy(() => import("./pages/Insights"));
+const Contact = React.lazy(() => import("./pages/Contact"));
+const LoginPage = React.lazy(() => import("./pages/LoginPage"));
+const BlogSection = React.lazy(() =>
+  import("./components/blogs/BlogSection")
+);
+const BlogDetails = React.lazy(() =>
+  import("./components/blogs/BlogDetails")
+);
+const WhitepaperDetail = React.lazy(() =>
+  import("./components/whitepappers/WhitepaperDetail")
+);
+const WhitepapperSection = React.lazy(() =>
+  import("./components/whitepappers/WhitepapperSection")
+);
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />, // Layout component that includes Navbar
+    element: <Layout />,
     children: [
       {
-        index: true, // This sets the Home page as the default page when the root route is accessed
-        element: <HomePage />, // Home component will be rendered by default
+        index: true,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <HomePage />
+          </Suspense>
+        ),
       },
       {
         path: "features",
-        element: <Features />, // Features page will be rendered here
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Features />
+          </Suspense>
+        ),
       },
       {
         path: "pricing",
-        element: <Pricing />, // Pricing page will be rendered here
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Pricing />
+          </Suspense>
+        ),
       },
       {
         path: "insights",
-        element: <Insights />, // Insights page will be rendered here
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Insights />
+          </Suspense>
+        ),
       },
       {
         path: "contact",
-        element: <Contact />, // Contact page will be rendered here
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Contact />
+          </Suspense>
+        ),
       },
       {
         path: "login",
-        element: <LoginPage />, // Contact page will be rendered here
+        element: (
+          <Suspense fallback={<Loader />}>
+            <LoginPage />
+          </Suspense>
+        ),
       },
       {
         path: "blog",
-        element: <BlogSection />, // Contact page will be rendered here
+        element: (
+          <Suspense fallback={<Loader />}>
+            <BlogSection />
+          </Suspense>
+        ),
       },
       {
         path: "blogdetail",
-        element: <BlogDetails />, // Contact page will be rendered here
+        element: (
+          <Suspense fallback={<Loader />}>
+            <BlogDetails />
+          </Suspense>
+        ),
       },
       {
         path: "whitepaper",
-        element: <WhitepapperSection />, // Contact page will be rendered here
+        element: (
+          <Suspense fallback={<Loader />}>
+            <WhitepapperSection />
+          </Suspense>
+        ),
       },
       {
         path: "whitepaperdetail",
-        element: <WhitepaperDetail />, // Contact page will be rendered here
+        element: (
+          <Suspense fallback={<Loader />}>
+            <WhitepaperDetail />
+          </Suspense>
+        ),
       },
     ],
   },
 ]);
+
 const App = () => {
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
+  return <RouterProvider router={router} />;
 };
+
 export default App;

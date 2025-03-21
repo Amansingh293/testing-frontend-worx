@@ -14,3 +14,12 @@ body {
   overflow-x: hidden;
 }
 
+.loader-spin {
+  animation: spinner 1.5s linear infinite;
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}

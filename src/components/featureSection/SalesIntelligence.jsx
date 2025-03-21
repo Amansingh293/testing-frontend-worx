@@ -13,7 +13,7 @@ import CustomButton from "../CustomButton";
 
 const SalesIntelligence = () => {
   return (
-    <div className="flex flex-col gap-10 pl-3 pr-3 pt-12 pb-12 font-inter rounded-3xl bg-white">
+    <div className="flex flex-col gap-10 pl-12 pr-8 pt-12 pb-12 font-inter rounded-3xl bg-white">
       <div className="flex flex-col w-full items-center gap-4">
         <h1 className="text-[#252B37] leading-[38px] text-[30px]">
           AI-Driven Sales Intelligence

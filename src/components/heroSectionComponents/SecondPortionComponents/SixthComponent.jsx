@@ -4,7 +4,7 @@ import AiAssistance from "@/assets/aiassistance.png";
 
 const SixthComponent = () => {
   return (
-    <div className="flex pt-10 mt-20 font-inter w-full justify-start gap-20 items-center relative h-[560px]">
+    <div className="flex pt-10 mt-20 font-inter w-full justify-center gap-20  items-center relative h-[560px]">
       <img src={AiAssistance} alt="AiAssistance" />
       {/* <AiAssistanceComponent /> */}
       {/* right portion */}

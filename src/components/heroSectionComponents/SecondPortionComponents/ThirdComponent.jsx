@@ -5,7 +5,7 @@ import PersonCard from "@/components/common/PersonCard";
 
 const ThirdComponent = () => {
   return (
-    <div className="flex pt-10 mt-20 font-inter w-full justify-center items-center gap-32 ">
+    <div className="flex pt-10 mt-20 font-inter w-full justify-center items-center gap-20 ">
       {/* left portion */}
       <InfoSection
         className={""}

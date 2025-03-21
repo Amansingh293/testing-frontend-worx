@@ -19,7 +19,7 @@ const InfoSection = ({
         </p>
       </div>
       <div className="flex flex-col items-start w-3/4 text-[#207C97] gap-3">
-        <h1 className="text-[36px] font-semibold leading-[44px] tracking-[-0.72px] bg-[#f4f9f9] pl-[1px] pr-[1px] pt-[2px] rounded-sm pb-[2px]">
+        <h1 className="text-[36px] font-semibold leading-[44px] tracking-[-0.72px] bg-[#f4f9f9] pl-[5px] pr-[5px] pt-[2px] rounded-sm pb-[2px]">
           {stat}
         </h1>
         <p>{statDescription}</p>
