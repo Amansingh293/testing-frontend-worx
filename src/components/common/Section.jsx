@@ -3,7 +3,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import campaign from "@/assets/campaign.png";
 import DropEffect from "./dropEffectAnimation/DropEffect";
 
-
 const Section = ({ text, text2, buttonText }) => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -38,13 +37,13 @@ const Section = ({ text, text2, buttonText }) => {
 
   return (
     <div className="mt-10 rounded-[20px] bg-[#207C97] p-20 flex justify-start w-[1153px] h-[399px]">
-      <section className=" w-[359px] h-[280px]  relative">
+      <section className=" w-[359px] h-[280px]  relative z-10">
         {/* <section className="rounded-[20px] bg-[#207C97] w-full h-[280px] flex-shrink-0 mx-auto md:w-[90%] lg:w-[80%] py-12 md:py-16 px-6 relative"> */}
-        <div className="text-center">
-          <h2 className="text-white text-center font-inter text-[30px] font-medium leading-[38px] sm:text-[32px]">
+        <div className="flex flex-col items-start">
+          <h2 className="text-white  font-inter text-[30px] font-medium leading-[38px] sm:text-[32px]">
             {text}
           </h2>
-          <p className="mt-4 text-white text-center font-inter text-[16px] font-normal leading-[24px]">
+          <p className="mt-4 text-white  font-inter text-[16px] font-normal leading-[24px]">
             {text2}
           </p>
           {/* <button className="mt-6 bg-white text-teal-600 font-medium px-6 py-3 rounded-md shadow-md hover:bg-gray-200">
@@ -91,14 +90,11 @@ const Section = ({ text, text2, buttonText }) => {
             ></span>
           </button>
         </div>
+        
+        <img src={campaign} alt="campaign" className="absolute top-[10px] left-[600px] z-0" />
 
-{/* 
-        <img
-          src={campaign}
-          alt="campaign"
+        
 
-          // className="h-[433px] w-[779.24px]"
-        /> */}
         {/* Top-left Decorative Circle */}
         {/* <div className="absolute -top-14 -left-14 w-48 h-48 md:w-40 md:h-40 rounded-full border-8 border-white opacity-20"></div> */}
 

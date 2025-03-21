@@ -25,8 +25,8 @@ const HomePage = () => (
     <SuccessStory />
     <CalendlyHomePage/>
     <Section
-      text={"Start Your Free Trial Today!"}
-      text2={"Transform your sales process with AI-powered automation and insights."} />
+      text={"Free Trial: Transform Your Sales Pipeline with AI SDRs"}
+      text2={"A limited-time trial to let potential customers experience the product firsthand."} />
     <BlogSlide
       text={"Insights to Elevate Your Sales Game"}
       goto={"blogdetail"}
